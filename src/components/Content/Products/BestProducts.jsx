@@ -20,6 +20,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useAuth } from "../../../contexts/AuthContext";
 import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
+import Bounce from "react-reveal/Bounce";
 const BestProducts = () => {
   const {
     user: { email },

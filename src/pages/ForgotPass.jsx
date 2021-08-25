@@ -9,7 +9,7 @@ const ForgotPass = () => {
     setMess(e.target.value);
   };
   return (
-    <div className='font-mono bg-gray-400'>
+    <div className='font-mono bg-blue-400'>
       {/* Container */}
       <div className='container mx-auto'>
         <div className='flex justify-center items-center h-screen px-6'>
@@ -20,7 +20,7 @@ const ForgotPass = () => {
               className='w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg'
               style={{
                 backgroundImage:
-                  'url("https://source.unsplash.com/oWTW-jNGl9I/600x800")',
+                  'url("https://i.pinimg.com/originals/7f/2c/11/7f2c1169fb3939b3694ce65aae7942c5.jpg")',
               }}
             />
             {/* Col */}
@@ -41,7 +41,7 @@ const ForgotPass = () => {
                     Email
                   </label>
                   <input
-                    className='w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline'
+                    className='w-full px-3 py-2 text-sm leading-tight text-blue-400 border rounded shadow appearance-none focus:outline-none focus:shadow-outline'
                     id='email'
                     type='email'
                     placeholder='Enter Email Address...'
@@ -51,7 +51,7 @@ const ForgotPass = () => {
                 <div className='mb-6 text-center'>
                   <button
                     onClick={() => resetPass(mess)}
-                    className='w-full px-4 py-2 font-bold text-white bg-red-500 rounded-full hover:bg-red-700 focus:outline-none focus:shadow-outline'
+                    className='w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-red-700 focus:outline-none focus:shadow-outline'
                     type='button'
                   >
                     Reset Password

@@ -6,6 +6,8 @@ import SecondCarousel from "../components/Content/SecondCarousel";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import "../components/Navbar/Navbar.css";
+import Flip from "react-reveal/Flip";
+import Bounce from "react-reveal/Bounce";
 
 const HomePage = () => {
   return (
@@ -13,14 +15,19 @@ const HomePage = () => {
       <div className='home'>
         <Carousel />
       </div>
+
       <AboutUs />
-      <SecondCarousel />
+      <Flip left>
+        <SecondCarousel />
+      </Flip>
       <h2 className='text-center text-5xl text-blue-400 mt-20'>
         TOP 3 CREATURES
       </h2>
-      <div className='grid grid-cols-1 2xl:grid-cols-3 sm:grid-cols-3'>
-        <BestProducts />
-      </div>
+      <Bounce top>
+        <div className='grid grid-cols-1 2xl:grid-cols-3 sm:grid-cols-3'>
+          <BestProducts />
+        </div>
+      </Bounce>
 
       <Footer />
     </>

@@ -19,18 +19,36 @@ SwiperCore.use([Pagination, Navigation]);
 
 export default function Views({ product }) {
   const [swiperRef, setSwiperRef] = useState(null);
-
+  const [promise, setPromise] = useState([]);
   const {
     user: { email },
   } = useAuth();
-  const [products, setProducts] = useState([]);
-  const getProducts = () => {
-    let arr = [...products, product];
-    setProducts(arr);
+
+  // const [prod, setProd] = useState({
+  //   title: "",
+  //   type: "",
+  //   image: "",
+  //   description: "",
+  //   price: 0,
+  //   likes: [],
+  //   comments: [],
+  //   views: [],
+  // });
+
+  // const addView = () => {
+  //   product.views?.push(email);
+  // };
+  const getViews = async () => {
+    let { data } = await axios(JSON_API_PRODUCTS);
+    let arr = await data.filter((item) => item.views.length > 0);
+    let ar = await arr;
+
+    setPromise(ar);
+    console.log(ar);
   };
   useEffect(() => {
-    getProducts();
-  }, [products.length]);
+    getViews();
+  }, []);
 
   let appendNumber = 4;
   let prependNumber = 1;
@@ -75,7 +93,7 @@ export default function Views({ product }) {
         navigation={true}
         className='mySwiper '
       >
-        {products.map((item) => (
+        {promise?.map((item) => (
           <SwiperSlide>
             <div className='grid gap-4'>
               <img

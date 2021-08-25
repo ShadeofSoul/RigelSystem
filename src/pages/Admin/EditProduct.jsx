@@ -32,6 +32,7 @@ const EditProduct = () => {
     price: 0,
     likes: [],
     comments: [],
+    views: [],
   });
   const classes = useStyles();
   const { getProductDetails, productDetails, history, saveEditedProduct } =

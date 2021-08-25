@@ -201,6 +201,10 @@ const ProductContextProvider = ({ children }) => {
   //////////////////////////////    CART END /////////////////////////////
   /////////
   //////////////////////
+  //  async function editCard(id, newObj) {
+  //   await axios.patch(`${JSON_API_PRODUCTS}/${id}`, newObj);
+  //   getProductsData();
+  // }
   //////////////////////////////////////////////////
 
   /////////////////////////////     FAVORITES  start ////////////////////////////////////////////////////////////////
@@ -305,7 +309,7 @@ const ProductContextProvider = ({ children }) => {
   //////////////////////////     COMMENTS   START      ////////////////////////
   const editProduct = async (id, proComm) => {
     await axios.patch(`${JSON_API_PRODUCTS}/${id}`, proComm);
-    // return console.log(data);
+    getProductsData();
   };
   //////////////        COMMENTS END       /////////////////////////
   /////////

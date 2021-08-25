@@ -109,7 +109,7 @@ button:disabled {
   margin: 0 auto;
   border-radius: 20px;
   transition-duration: 0.4s;
-  background-color: #eebb4f;
+  background-color: #060e1f;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -120,7 +120,7 @@ button:disabled {
   font-size: 1.25rem;
 }
 .sign-in:hover {
-  background-color: #4caf50;
+  background-color: #00ffff;
   color: white;
 }
 

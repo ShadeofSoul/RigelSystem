@@ -71,11 +71,13 @@ export default function ProductCard({ item }) {
     deleteProduct,
     history,
     addProductToCart,
+    getProductsData,
     cart,
     favs,
     checkProductInCart,
     addProductToFavs,
     checkProductInFavs,
+    editProduct,
   } = useProducts();
 
   const addUserLike = async (email, id) => {
@@ -99,16 +101,26 @@ export default function ProductCard({ item }) {
     return found.length > 0 ? setLike(true) : setLike(false);
   };
 
+  function handleView(pro, user) {
+    console.log("HANDLE VIEW WORKED");
+    let newView = user;
+    let newPro = { ...pro };
+    newPro.views?.push(newView);
+    editProduct(pro.id, newPro);
+    history.push(`/details/${pro.id}`);
+  }
+
   return (
     <>
       <div className='w-30 text-gray-900 mr-5 '>
         <div>
-          <NavLink to={`/details/${item.id}`}>
-            <img
-              src={item.img}
-              className='w-full object-cover object-center rounded-lg shadow-md z-10'
-            />
-          </NavLink>
+          {/* <NavLink to={`/details/${item.id}`}> */}
+          <img
+            onClick={() => handleView(item, email)}
+            src={item.img}
+            className='w-full object-cover object-center rounded-lg shadow-md z-10'
+          />
+          {/* </NavLink> */}
           <div className=' -mt-16 '>
             <div className='bg-gradient-to-r from-green-400 to-blue-500 p-6 rounded-lg shadow-lg'>
               <div className='flex items-baseline'>

@@ -10,7 +10,7 @@ const useStyles = makeStyles({
   tableMain: {
     width: "100vw",
     height: "100%",
-    backgroundImage: `url(${"https://gamebomb.ru/files/galleries/001/2/27/220888.jpg"})`,
+    backgroundImage: `url(${"https://cdn1.parksmedia.wdprapps.disney.com/media/blog/wp-content/uploads/2017/04/01_ParksBlog_PandoraMerchArt_FEATURE.jpg"})`,
     display: "flex",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
