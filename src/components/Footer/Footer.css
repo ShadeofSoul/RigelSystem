@@ -1,0 +1,12 @@
+.main-footer {
+  width: 100%;
+  height: 37vh;
+  margin-top: 7rem;
+  background-image: url("https://pa1.narvii.com/7575/8f2d08803a60840303066dc4b74245da219ed9e6r1-444-250_hq.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  left: 0;
+  bottom: 0;
+}

@@ -1,0 +1,81 @@
+.container1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container1 a {
+  position: absolute;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #00ffff;
+  text-decoration: none;
+  margin: 40px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #fff;
+  -webkit-box-reflect: below 0px linear-gradient (transparent, #0002);
+  transition: 0.5s;
+}
+
+.container1 a:hover {
+  color: #000;
+  box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff,
+    0 0 80px #00ffff;
+}
+
+.container1 a:nth-child(2) {
+  filter: hue-rotate(80deg);
+}
+
+.container1 a::before {
+  content: "";
+  margin-top: 28px;
+  position: absolute;
+  left: -20px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: #00ffff;
+  box-shadow: 5px -8px 0 #00ffff, 5px 8px 0 #00ffff;
+  transition: width 0.5s, left 0.5s, height 0.5s;
+  box-shadow: 0.5s;
+  transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.container1 a span {
+  z-index: 99;
+  position: relative;
+}
+
+.container1 a:hover::before {
+  width: 60%;
+  height: 100%;
+  left: -2px;
+  box-shadow: 5px 0 0 #00ffff, 5px 0 0 #00ffff;
+  transition-delay: 0s, 0.5s, 1s, 1s;
+}
+
+.container1 a::after {
+  content: "";
+  position: absolute;
+  margin-top: 28px;
+  right: -20px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: #00ffff;
+  box-shadow: 5px -8px 0 #00ffff, 5px 8px 0 #00ffff;
+  transition: width 0.5s, left 0.5s, height 0.5s;
+  box-shadow: 0.5s;
+  transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.container1 a:hover::after {
+  width: 60%;
+  height: 100%;
+  right: -2px;
+  box-shadow: -5px 0 0 #00ffff, -5px 0 0 #00ffff;
+  transition-delay: 0s, 0.5s, 1s, 1s;
+}
