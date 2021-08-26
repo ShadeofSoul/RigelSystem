@@ -8,14 +8,12 @@ import fire from "../firebase/Fire";
 const auth = fire.auth();
 console.log(auth);
 const firestore = fire.firestore();
-const analytics = fire.analytics();
 const ForumPage = () => {
   const [user] = useAuthState(auth);
   return (
     <div className='forum'>
       <div className='forumContainer'>
         <header className='forumHeader'>
-          {/* <h1>PLANTFORUM</h1> */}
           <SignOut />
         </header>
 

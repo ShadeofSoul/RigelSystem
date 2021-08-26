@@ -16,7 +16,7 @@ import {
 } from "react-hook-form";
 
 import Cards from "react-credit-cards";
-import History from "../../components/Content/Products/History";
+import History from "../../images/History";
 import "react-credit-cards/es/styles-compiled.css";
 import { useProducts } from "../../contexts/ProductContext";
 
