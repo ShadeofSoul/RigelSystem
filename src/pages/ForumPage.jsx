@@ -14,7 +14,7 @@ const ForumPage = () => {
     <div className='forum'>
       <div className='forumContainer'>
         <header className='forumHeader'>
-          <SignOut />
+          <SignOut className='ml-1/2' />
         </header>
 
         <section className='forumSection'>
@@ -53,6 +53,7 @@ function SignOut() {
 
 function ChatRoom() {
   const dummy = useRef();
+  console.log(dummy);
   const messagesRef = firestore.collection("users");
   const query = messagesRef.orderBy("createdAt").limit(25);
   const [messages] = useCollectionData(query, { idField: "id" });
@@ -60,7 +61,7 @@ function ChatRoom() {
 
   const sendMessage = async (e) => {
     e.preventDefault();
-    console.log(auth.currentUser);
+    // console.log(auth.currentUser);
 
     const { uid, photoURL } = auth.currentUser;
 
@@ -102,7 +103,7 @@ function ChatRoom() {
 
 function ChatMessage(props) {
   const { text, uid, photoURL } = props.message;
-  console.log(auth.currentUser);
+  // console.log(auth.currentUser);
 
   const messageClass = uid === auth.currentUser.uid ? "sent" : "received";
 

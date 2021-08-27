@@ -59,10 +59,10 @@ const AboutUs = () => {
               </li>
               <li>
                 <a
-                  onClick={() => history.push("animals?_limit=9&type=Goala")}
+                  onClick={() => history.push("animals?_limit=9&type=Ugoan")}
                   href=''
                 >
-                  Goala
+                  Ugoan
                 </a>
               </li>
             </ul>

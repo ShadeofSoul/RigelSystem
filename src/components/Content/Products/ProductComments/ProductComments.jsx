@@ -18,17 +18,17 @@ const useStyles = makeStyles((theme) => ({
   },
   paper_modal: {
     backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
-    boxShadow: theme.shadows[5],
+    border: "60px solid #00ffff",
+    boxShadow: theme.shadows[6],
     padding: theme.spacing(2, 4, 3),
   },
   input: {
-    color: "#e8c271",
+    color: "#00ffff",
     borderRightColor: "#FFF",
   },
   input__label: {
     color: "#f2e49d",
-    borderRightColor: "#FFF",
+    borderRightColor: "#00ffff",
   },
 }));
 
@@ -199,7 +199,7 @@ const ProductComments = () => {
                         <TextField
                           variant='outlined'
                           label='Edit Comment'
-                          color='secondary'
+                          color='primery'
                           style={{ width: "420px" }}
                           onChange={(e) => handleInput(e)}
                         />
@@ -213,7 +213,7 @@ const ProductComments = () => {
                             editComment(index, product.id, product)
                           }
                         >
-                          <SaveIcon color='white' />
+                          <span className='text-indigo-400 text-2xl'>Edit</span>
                         </Button>
                       </div>
                     </Fade>
@@ -254,7 +254,6 @@ const ProductComments = () => {
       ) : (
         <CircularProgress />
       )}
-      <Footer />
     </>
   );
 };
