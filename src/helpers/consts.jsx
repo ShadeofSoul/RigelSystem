@@ -10,6 +10,7 @@ export const ACTIONS = {
 
 export const ADMIN = "aijan@gmail.com";
 
-export const JSON_API_PRODUCTS = "https://rigelsystem.herokuapp.com/api";
+export const JSON_API_PRODUCTS =
+  "https://rigelsystem.herokuapp.com/api/creatures";
 
 export const PRODUCT_LIMIT = 8;
